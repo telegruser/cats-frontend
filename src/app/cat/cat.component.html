@@ -1,0 +1,34 @@
+<button type="button" class="btn btn-primary" style="margin: 6px" (click)="backToCats()">Назад</button>
+<div *ngIf='cat != null' class="card-body card">
+    <div class="row justify-content-center align-items-center">
+        
+        <div class="card text-left" style="width: 20rem;">
+          <div class="card-body">
+            
+            
+            <div class="form-group">
+                <h6 style="text-align: right">id: {{cat.id}}</h6>
+                <p>Имя: </p>
+            
+            <input class="form-control" name="name" [(ngModel)]="cat.name" #catName="ngModel" (change)="toChange()" type="text" class="list-group-item form-control"/>
+            <!-- <br> -->
+            <p>День рождения: </p>
+            <input (change)="toChange()" type="text" id="newBirthday" value={{cat.birthday}} class="list-group-item form-control" #birthday/>
+            <!-- <br> -->
+            <p>Порода: </p><input (change)="toChange()" type="text" id="newBreed" value={{cat.breed}} class="list-group-item form-control" #breed/>
+            <!-- <br> -->
+            <p>Пол: </p><input (change)="toChange()" type="text" id="newSex" value={{cat.sex}} class="list-group-item form-control" #sex/>
+            <!-- <br> -->
+            <div style="text-align: center">Кот был добавлен: {{cat.datetime | date:"dd.MM.yyyy"}}</div>
+            <br>
+            <table>
+              <tr>
+                <td><button mat-button type="button" (click)="removeCat()">Удалить</button></td>
+                <td><button mat-button type="button" (click)="editCat()">Сохранить</button></td>
+              </tr>
+            </table>
+  </div>
+</div>
+</div>
+</div>
+</div>

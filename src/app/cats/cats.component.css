@@ -1,0 +1,48 @@
+.card {
+    align-content: center;
+    margin: 12px;
+    /* text-align: center; */
+    /* padding: 40px; */
+}
+
+/* list-group-item {
+    padding: 2px;
+    border: 2px solid gray;
+} */
+
+li {
+    padding: 4px;
+    /* margin: 1px; */
+}
+
+
+/* .datepicker {
+    padding: 6px;
+    align-content: center;
+    align-items: center;
+    align-self: center;    
+} */
+
+/* .text-left-group {
+    text-align: left;
+}*/
+
+p {
+    margin: 4px
+}
+
+input {
+    margin: 6px;
+} 
+
+table {
+    margin: 6px;
+    width: 100%;
+    /* border-style: solid; */
+    /* border: 1px solid gray; */
+    border-collapse: collapse;
+    /* border-block: 2px; */
+}
+
+th, td {width: 50%;}
+

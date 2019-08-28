@@ -1,0 +1,197 @@
+<div class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class="card text-left" style="width: 20rem;" *ngFor="let cat of cats">
+        <div class="card-body">
+          <h5 class="card-title text-center">
+            
+            <!-- <table>
+              <tr>
+                  <td style="width: 33%"></td>
+                  <td style="width: 33%; text-align: center"></td>
+                  <td style="width: 33%"><button mat-button>изменить</button></td>
+              </tr>
+              <tr>
+                <td style="width: 33%"></td>
+                <td style="width: 33%; text-align: center">{{cat.name}}</td>
+                <td style="width: 33%"></td>
+              </tr>
+              </table>           -->
+              {{cat.name}}
+          </h5>
+          <br>
+  
+          <li class="list-group-item">
+            <table><tr><td>День рождения:</td><td>{{cat.birthday}}</td></tr></table>
+          </li>
+          <li class="list-group-item">
+            <table><tr><td>Порода:</td><td>{{cat.breed}}</td></tr></table>
+          </li>
+          <li class="list-group-item">
+            <table><tr><td>Пол:</td><td>{{sexToString(cat.sex)}}</td></tr></table>
+          </li>
+          <li class="list-group-item">
+            <table><tr><td>Добавлен:</td><td>{{cat.datetime | date:"dd.MM.yyyy"}}</td></tr></table>
+          </li>
+            <br>
+          <table>
+              <tr>
+                  <td style="width: 33%; text-align: left"><button mat-button (click)="removeCat(cat.id)">Удалить</button></td>
+                  <td style="width: 33%; text-align: center"></td>
+                  <td style="width: 33%; text-align: right"><button mat-button (click)="editCat(cat.id)">Редактировать</button></td>
+              </tr>
+          </table>
+          
+          
+          <!-- <form class="example-form text-center">
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Имя:" value={{cat.name}}>
+              </mat-form-field>
+              
+              <div class="text-center datepicker">
+                  <mat-form-field>
+                    <input matInput [matDatepicker]="picker" placeholder="День рождения" (dateChange)="addEvent('change', $event)">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field></div>
+              
+              <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Порода:" value={{cat.breed}}>
+                </mat-form-field>
+  
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Пол:" value={{cat.name}}>
+                  </mat-form-field>
+  
+                  <li class="list-group-item">Добавлен: {{cat.datetime | date:"medium"}}</li>
+            </form> -->
+          
+            <!-- <table>
+              <tr>
+                <td>Имя:</td>
+                <td><input type="text" id="newName" value={{cat.name}} class="list-group-item form-control" [readonly] #name/></td>
+              </tr>
+              <tr>
+                <td>День рождения:</td>
+                <td> -->
+                  <!-- <input type="text" id="newBirthday" value={{birthdayToStr(cat.birthday)}} class="list-group-item form-control" #birthday/> -->
+  
+                  <!-- <div class="text-center datepicker">
+                      <mat-form-field>
+                        <input matInput [matDatepicker]="picker" [value]="birthdayToDate(cat.birthday)" (dateChange)="addEvent('change', $event)">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                      </mat-form-field></div>
+  
+                </td>
+              </tr>
+              <tr>
+                <td>Порода:</td>
+                <td><input type="text" id="newBreed" value={{cat.breed}} class="list-group-item form-control" #breed/></td>
+              </tr>
+              <tr>
+                <td>Пол:</td> -->
+                <!-- <td><input type="text" id="newSex" value={{sexToString(cat.sex)}} class="list-group-item form-control" #sex/></td> -->
+                <!-- <td><input type="text" id="newSex" value={{sexToString(cat.sex)}} class="list-group-item form-control" #sex/></td> -->
+                
+                          <!-- <td class="text-right">
+                              <mat-button-toggle-group name={{editCatSex}} [value]="cat.sex">          
+                                  <mat-button-toggle value="m">кот</mat-button-toggle>
+                                  <mat-button-toggle value="w">кошка</mat-button-toggle>
+                                </mat-button-toggle-group>
+                </td>
+              </tr>
+  
+              <tr>
+                  <td>Добавлен:</td>
+                  <td class="list-group-item" style="width: 100%; margin: 6px; padding: 6px">{{cat.datetime | date:"dd.MM.yyyy"}}</td>
+                </tr>
+  <br>
+                <tr>
+                    <td>
+                      <button type="button" class="btn btn-primary" (click)="editCat(cat.id, name.value, birthday.value, breed.value, editCatSex.value)">Редактировать</button>
+                    </td>
+                    <td style="width: 100%; margin: 6px; padding: 6px; text-align: right">
+                      <button type="button" class="btn btn-primary text-right" (click)="removeCat(cat.id)">Удалить</button>
+                    </td>
+                  </tr>
+  
+            </table>   -->
+            
+          
+            <!-- <li class="list-group-item">Добавлен: {{cat.datetime | date:"dd.MM.yyyy"}}</li>             -->
+            
+
+
+            <!-- <table>
+              <tr>
+                <td>Имя: </td>
+                <td><mat-card>{{cat.name}}</mat-card></td>
+              </tr>
+              <tr>
+                  <td>День рождения: </td>
+                  <td></td>
+              </tr>
+              <tr>
+                  <td>Порода: </td>
+                  <td></td>
+              </tr>
+              <tr>
+                  <td>Пол: </td>
+                  <td></td>
+              </tr>
+              <tr>
+                  <td>Добавлен: </td>
+                  <td></td>
+              </tr>
+            </table> -->
+            
+          
+          <!-- <p>Имя: </p><input type="text" id="newName" value={{cat.name}} class="list-group-item form-control" [readonly] #name/><br>
+          <p>День рождения: </p><input type="text" id="newBirthday" value={{cat.birthday}} class="list-group-item form-control" #birthday/><br>
+          <p>Порода: </p><input type="text" id="newBreed" value={{cat.breed}} class="list-group-item form-control" #breed/><br>
+          <p>Пол: </p><input type="text" id="newSex" value={{cat.sex}} class="list-group-item form-control" #sex/><br>
+          <li class="list-group-item" style="text-align: center">Добавлен: {{cat.datetime | date:"dd.MM.yyyy"}}</li> -->
+          <!-- <br> -->
+          <!-- <button mat-button type="button" class="btn btn-primary" style="margin: 6px" (click)="removeCat(cat.id)">Удалить</button>
+          <button type="button" class="btn btn-primary" (click)="editCat(cat.id, name.value, birthday.value, breed.value, sex.value)">Редактировать</button> -->
+          <!-- <button type="button" class="btn btn-primary" (click)="editedForm = cat.id">Редактировать</button-->
+        </div>
+  
+  
+      </div>
+  
+      <div class="card text-left" style="width: 18rem;">
+        <div class="card-body">                    
+          <h5 class="card-title text-center">Добавить кота</h5>
+          <input type="text" id="newName" placeholder="Имя" class="list-group-item form-control" #newName/>
+          
+          <!-- <button mat-button>Click me!</button> -->
+          <!-- <div class="text-center datepicker">
+          <mat-form-field>
+            <input matInput [matDatepicker]="picker" placeholder="День рождения" (dateChange)="addEvent('change', $event)">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field></div> -->
+  
+          <input type="text" id="newBirthday" placeholder="День рождения (2000-01-01)" class="list-group-item form-control" #newBirthday/>
+          <input type="text" id="newBreed" placeholder="Порода" class="list-group-item form-control" #newBreed/>
+          <input type="text" id="newSex" placeholder="Пол (m/w)" class="list-group-item form-control" #newSex/>
+  
+            <!-- <table class="text-center">
+                <tr>
+                  <td>Пол:</td>
+                  <td class="text-right">
+                      <mat-button-toggle-group name="newSexGroup" #newSexGroup>          
+                          <mat-button-toggle value="m">кот</mat-button-toggle>
+                          <mat-button-toggle value="w">кошка</mat-button-toggle>
+                        </mat-button-toggle-group>
+                  </td>
+                </tr>
+              </table> -->
+  
+          <br>
+          <button type="button" class="btn btn-primary form-control" (click)="addCat(newName.value, newBirthday.value, newBreed.value, newSex.value)">Добавить</button>
+        </div>
+      </div>
+    </div>
+  </div>

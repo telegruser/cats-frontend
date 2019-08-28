@@ -1,0 +1,37 @@
+<!-- <div *ngIf="username" class="col-12 mt-2">
+        <button (click)="logout()" class="btn btn-sm btn-outline-primary float-right">Выйти</button>
+        <h2>Добро пожаловать, {{givenName}}!</h2>
+        <p><a routerLink="/search" routerLinkActive="active">Поиск</a></p>
+      </div> -->
+      
+      <!-- <div class="card mt-2" *ngIf="!givenName">
+        <div class="card-body">
+          <h4 class="card-title">Войти через authorization server</h4>
+          <button class="btn btn-primary" (click)="login()">Войти</button>
+        </div>
+      </div> -->
+      
+      <!-- <div class="card mt-2" *ngIf="!givenName"> -->
+        <div class="card-body">
+          <h4 class="card-title">Регистрация</h4>
+      
+          <p class="alert alert-error" *ngIf="registerAlert">
+            {{alertText}}
+          </p>
+          <div class="form-group">
+            <label>Логин</label>
+            <input class="form-control" [(ngModel)]="username">
+          </div>
+          <div class="form-group">
+            <label>Пароль</label>
+            <input class="form-control" type="password" [(ngModel)]="password1">
+          </div>
+          <div class="form-group">
+                <label>Повторите пароль</label>
+                <input class="form-control" type="password" [(ngModel)]="password2">
+              </div>
+          <div class="form-group">
+            <button class="btn btn-primary" (click)="register()">Зарегистрироваться</button>
+          </div>
+        </div>
+      <!-- </div> -->
